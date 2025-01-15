@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #e3e3e3;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.avatar {
+  font-size: 80px;
+  margin-bottom: 20px;
+}
+
+.header .title-header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.social-links {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.social-links a {
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.social-links img {
+  width: 27px;
+  height: 27px;
+}
+
+.about {
+  margin-top: 30px;
+}
+
+.about .myself-main {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.about .info-myself {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.8;
+}
+
+.projects {
+  margin-top: 30px;
+}
+
+.projects .projects-title {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.project-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.project-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.project-link:hover {
+  background-color: #eaeaea;
+  transform: translateY(-3px);
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.project-description {
+  font-size: 14px;
+  color: #777;
+  margin-top: 5px;
+}
+
+.arrow {
+  font-size: 24px;
+  color: #777;
+}
+
+@media (max-width: 768px) {
+  /* Для планшетов и мобильных устройств */
+  .container {
+    padding: 15px;
+  }
+
+  .title-header {
+    font-size: 20px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .project-link {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .arrow {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Для очень маленьких мобильных устройств */
+  .title-header {
+    font-size: 18px;
+  }
+
+  .description {
+    font-size: 12px;
+  }
+
+  .project-title {
+    font-size: 16px;
+  }
+
+  .project-description {
+    font-size: 12px;
+  }
+
+  .arrow {
+    font-size: 16px;
+  }
+}
+
+/* Анимации появления для карточек проектов */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: rotateY(0);
+  }
+}
+
+.project-link {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+/* Анимации появления для заголовков и блока о себе */
+
+.header,
+.about {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+.projects-title {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+/* Анимации для карточек проектов */
+
+.project-link {
+  transition: transform 0.3s ease, backgroumg-color 0.3s ease;
+}
+
+.project-link:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.05);
+}
+
+.footer {
+  margin-top: 50px;
+  padding: 15px;
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+}
+
+/* https://coursme.com/guide/sozdanie-saita-vizitki/blok-o-sebe-i-kartochki-proektov */
+
